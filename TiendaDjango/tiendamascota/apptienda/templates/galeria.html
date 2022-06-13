@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
+    <link href="css/estilos.css" type="text/css" rel="stylesheet">
+    {% load static %} 
+    <link rel="icon" type="image/png" href="{% static 'img/purina-adopta-perros-en-adopción.webp' %}" />
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>PRODUCTOS</title>
+    <style>
+
+      body {
+                  font-family: cursive;
+                }
+      
+        </style> 
+<script>
+function mueveReloj(){
+    momentoActual = new Date()
+    hora = momentoActual.getHours()
+    minuto = momentoActual.getMinutes()
+    segundo = momentoActual.getSeconds()
+
+    horaImprimible = hora + " : " + minuto + " : " + segundo
+
+    document.form_reloj.reloj.value = horaImprimible
+
+    setTimeout("mueveReloj()",1000)
+}
+function MostrarFecha() 
+        {   document.getElementById('demo').innerHTML = Date();
+         
+        }
+
+
+
+</script>
+
+
+</head>
+<body class="fondo" onload="mueveReloj()">
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #00eef7;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- logo -->
+        <a class="navbar-brand" href="#">
+          {% load static %}
+          <img src="{% static 'img/purina-adopta-perros-en-adopción.webp' %}" width="40" height="40" alt="">
+    </a>
+    
+    <!-- enlaces -->
+    <div class="collapse navbar-collapse" id="opciones"> 
+        
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index' %}" target="_blank">Principal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'somos' %}" target="_blank">Quienes Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'galeria' %}" target="_blank">Galeria</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'formulario' %}" target="_blank">formulario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'formularioContacto' %}" target="_blank">Contacto</a>
+          <a</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'api' %}" target="_blank">Dias festivos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'ventaproductos' %}" target="_blank"> ventas </a>
+        </li>       
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}" target="_blank"> iniciar sesion </a>    
+      </ul>
+      
+        </div>
+      </nav>
+
+      <form name="form_reloj">
+        <input type="text" name="reloj" size="10">
+        </form>
+
+
+      <div class="container-fluid"> 
+        {% load static %} 
+
+      <div class="row">
+    <div id="caja" class="col-xl-5">
+        <img src="{% static 'img/image11.jpeg' %}" class="img-thumbnail">
+        <p1> Pack de Bandana y Collar + placa personalizada con brillitos. 
+            <br>
+            Valor $14.990
+            <br>
+            Todos los tamaños
+            <br>
+            Envio a todo Chile 
+         </p>
+    </div>
+    <div class="col-xl-1">
+
+    </div>
+    <div id="caja" class="col-xl-5">
+        <img src="{% static 'img/image12.jpeg' %}" class="img-thumbnail">
+        <p1>Pack de Bandana y Collar + placa personalizada con brillitos.
+            <br> 
+            Valor $14.990
+            <br>
+            Todos los tamaños
+            <br>
+            Envio a todo Chile 
+         </p>
+    </div>
+      </div>
+<hr>
+
+<div class="row">
+    <div id="caja"  class="col-xl-5">
+        <img src="{% static 'img/image0.jpeg' %}" class="img-thumbnail">
+        <p1>Pack de Bandana y Collar + placa personalizada con brillitos.
+            <br> 
+            Valor $14.990
+            <br>
+            Todos los tamaños
+            <br>
+            Envio a todo Chile 
+         </p>        
+    </div>
+    <div class="col-xl-1">
+
+    </div>
+
+
+    <div id="caja"  class="col-xl-5">
+        <img src="{% static 'img/image6.jpeg' %}" class="img-thumbnail">
+        <p1> Pack de Bandana y Collar + placa personalizada con brillitos.
+            <br> 
+            Valor $14.990
+            <br>
+            Todos los tamaños
+            <br>
+            Envio a todo Chile  </p>
+</div>
+      </div>
+
+<hr>
+    <div class="row">
+    <div id="caja"  class="col-xl-5">
+        <img src="{% static 'img/image13.jpeg' %}" class="img-thumbnail">
+        <p1> Pack de Bandana y Collar + Correa. 
+            <br>
+            Valor $14.990
+            <br>
+            Todos los tamaños
+            <br>
+            Envio a todo Chile 
+        </p>
+    
+    </div >
+    <div class="col-xl-1">
+
+    </div>
+    <div id="caja" class="col-xl-5">
+        <img src="{% static 'img/image8.jpeg' %}" class="img-thumbnail">
+        <p> Pack de Bandana y Collar + Correa. 
+            <br>
+            Valor $14.990
+            <br>
+            Todos los tamaños
+            <br>
+            Envio a todo Chile 
+        </p>
+
+    </div>
+ </div>
+ </div>
+ <footer style="background-color: #00eef7;">
+
+  <div class="row col-12">
+      <div class="col-lg-1">
+      
+          <img src="{% static 'img/purina-adopta-perros-en-adopción.webp' %}" alt="logoBookStop" width="60px">
+      </div>
+      <div class="col-lg-5">
+          <strong>Ignacio Zuñiga <br>
+            Antonia Donoso
+          </strong></a>
+      </div>
+
+      <div class="col-lg-4">
+          <strong>Síguenos</strong>
+          <br><br>
+          <div class="row">
+              <img src="{% static 'img/FACE.png' %}" alt="" width="30px" height="30px"
+                  style=" margin-left: 15px;">
+              <img src="{% static 'img/whatsapp_icon_138013.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+              <img src="{% static 'img/INSTA.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+
+          </div>
+      </div>
+
+
+
+          <br><br><br>
+
+          <p>&copy; Tienda Mascota ZD</p>
+      </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+    
+
+</body>
+</html>

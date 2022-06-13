@@ -1,0 +1,15 @@
+#caja{
+    width: 300px;
+    border: 15px solid #00eef7;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  nav.navbar {
+    background-color: #00eeff !important;
+}
+
+
+body{
+  font-family: cursive;
+}

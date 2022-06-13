@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quienes somos </title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    {% load static %} 
+    <link rel="icon" type="image/png" href="{% static 'img/purina-adopta-perros-en-adopción.webp' %}" />
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+
+      body {
+                  font-family: cursive;
+                }
+      
+        </style> 
+    <script>
+function mueveReloj(){
+    momentoActual = new Date()
+    hora = momentoActual.getHours()
+    minuto = momentoActual.getMinutes()
+    segundo = momentoActual.getSeconds()
+
+    horaImprimible = hora + " : " + minuto + " : " + segundo
+
+    document.form_reloj.reloj.value = horaImprimible
+
+    setTimeout("mueveReloj()",1000)
+      
+}  
+      
+      
+      </script>
+      
+</head>
+<body class="fondo" onload="mueveReloj()">
+
+    
+  <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #00eef7;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- logo -->
+    <a class="navbar-brand" href="#">
+      {% load static %}
+      <img src="{% static 'img/purina-adopta-perros-en-adopción.webp' %}" width="40" height="40" alt="">
+</a>
+
+<!-- enlaces -->
+<div class="collapse navbar-collapse" id="opciones"> 
+    
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'index' %}" target="_blank">Principal</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'somos' %}" target="_blank">Quienes Somos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'galeria' %}" target="_blank">Galeria</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'formulario' %}" target="_blank">Registro</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'formularioContacto' %}" target="_blank">Contacto</a>
+      <a</a>
+    </li> 
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'api' %}" target="_blank">Dias Feriados</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'ventaproductos' %}" target="_blank"> Productos </a>
+    </li>       
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'login' %}" target="_blank"> Iniciar sesion </a>    
+  </ul>
+   
+    </div>
+  </nav>
+
+      <form name="form_reloj">
+        <input type="text" name="reloj" size="10">
+        </form>
+
+    <div class="container-fluid">   
+        <h1>¿Quiénes somos?</h1>
+        <div class="row">       
+          <div class="col-md">        
+              <div class="card">
+                {% load static %}
+                <img class="card-img-top" src="{% static 'img/Quienes somos imagen 1.jpg' %}">            
+                <div class="card-body">
+                  <h4 class="card-title">Tienda Mascota ZD </h4>
+                  <p class="card-text">Si has llegado hasta aqui es porque te estás preguntando, ¿Que es Tienda Mascotas DZ? Nosotros somos 
+                      un grupo de jovenes que en base a su gran amor hacia los animales , decidimos crear esta tienda para poder ayudar a darle una mejor
+                    calidad de vida a su mascota ya sea en productos de alimentacion, medicacion y entretencion. Nosotros ademas tenemos mascotas sin hogar 
+                para adopción, todos ellos con sus respectivas vacunas al dia esperando una familia que los quiera. Nosotros "nombre de la tienda" contamos con muchas evaluaciones positivas
+            de nuestra clientela, a ello sumandole el tiempo que llevamos trabajando en esta tienda lo cual hace que la gente confie en nuestros productos. Esperamos verlos pronto
+        por nuestra tienda , los recibiremos con los brazos abiertos. </p>
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VigrgrBRlug" 
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        </div>
+                </div>
+              </div>          
+          </div>
+          </div>
+          <footer style="background-color: #00eef7;">
+
+            <div class="row col-12">
+                <div class="col-lg-1">
+                
+                    <img src="{% static 'img/purina-adopta-perros-en-adopción.webp' %}" alt="logoBookStop" width="60px">
+                </div>
+                <div class="col-lg-5">
+                    <strong>Ignacio Zuñiga <br>
+                      Antonia Donoso
+                    </strong></a>
+                </div>
+          
+                <div class="col-lg-4">
+                    <strong>Síguenos</strong>
+                    <br><br>
+                    <div class="row">
+                        <img src="{% static 'img/FACE.png' %}" alt="" width="30px" height="30px"
+                            style=" margin-left: 15px;">
+                        <img src="{% static 'img/whatsapp_icon_138013.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                        <img src="{% static 'img/INSTA.png' %}" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+          
+                    </div>
+                </div>
+          
+          
+          
+                    <br><br><br>
+          
+                    <p>&copy; Tienda Mascota ZD</p>
+                </div>
+            </div>
+          </footer>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>
